@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="FatCat Cruz — AI-designed physical products and gadgets. Tools for a better life.">
+  <meta name="description" content="FatCat Cruz — AI-designed physical products and gadgets. Pipeline concept: Pocket NOD (negotiation prompt cards).">
   <meta property="og:image" content="https://fatcatcruz.com/logo.png">
   <title>FatCat Cruz</title>
   <style>
@@ -16,21 +16,37 @@
     .card:hover { border-color: #666; transform: translateY(-4px); }
     .card h2 { font-size: 1.5rem; margin-bottom: 0.5rem; font-weight: 500; }
     .card p { color: #aaa; line-height: 1.6; }
-    
+    .concept { background: linear-gradient(135deg, #1a1a1a 0%, #222 100%); border: 1px solid #c9a84c33; border-radius: 12px; padding: 2.5rem; max-width: 600px; width: 100%; margin-top: 2rem; text-align: center; }
+    .concept .badge { display: inline-block; background: #c9a84c22; color: #c9a84c; padding: 0.3rem 0.8rem; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; margin-bottom: 1rem; }
+    .concept h2 { font-size: 1.8rem; margin-bottom: 0.5rem; font-weight: 400; }
+    .concept p { color: #aaa; line-height: 1.6; margin-bottom: 1.5rem; }
+    .concept form { display: flex; gap: 0.5rem; max-width: 400px; margin: 0 auto; }
+    .concept input { flex: 1; padding: 0.7rem 1rem; background: #0a0a0a; border: 1px solid #333; color: #fff; border-radius: 6px; font-size: 0.9rem; }
+    .concept input:focus { outline: none; border-color: #c9a84c; }
+    .concept button { background: #c9a84c; color: #0a0a0a; border: none; padding: 0.7rem 1.5rem; border-radius: 6px; font-weight: 600; cursor: pointer; }
   </style>
 </head>
 <body>
   <h1>FatCat Cruz</h1>
   <p class="subtitle">Gadget Designer</p>
   <div class="cards">
-        <div class="card">
+    <div class="card">
       <h2>Mission</h2>
       <p>AI-designed physical products. Built to last, priced to move.</p>
     </div>
     <div class="card">
-      <h2>Pipeline</h2>
-      <p>Coming soon.</p>
+      <h2>Method</h2>
+      <p>Ship prototypes fast, validate with real users, then tool for production.</p>
     </div>
+  </div>
+  <div class="concept">
+    <div class="badge">Concept · Q4 2026</div>
+    <h2>Pocket NOD</h2>
+    <p>52 physical negotiation prompt cards. Wallet-sized. The tactical-empathy framework in your back pocket. Designed in Chicago, manufactured small-batch.</p>
+    <form onsubmit="event.preventDefault(); alert('Waitlist coming soon via ConvertKit');">
+      <input type="email" placeholder="you@email.com" required>
+      <button type="submit">Join Waitlist</button>
+    </form>
   </div>
   <footer style="text-align:center;color:#555;padding:2rem 1rem 3rem;font-size:0.85rem">&copy; 2026 FatCat Asset Management</footer>
 </body>
