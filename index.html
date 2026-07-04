@@ -1,53 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="FatCat Cruz — AI-designed physical products and gadgets. Pipeline concept: Pocket NOD (negotiation prompt cards).">
-  <meta property="og:image" content="https://fatcatcruz.com/logo.png">
-  <title>FatCat Cruz</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0a0a0a; color: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; }
-    h1 { font-size: 3rem; margin-bottom: 1rem; font-weight: 300; letter-spacing: -0.02em; }
-    .subtitle { color: #888; margin-bottom: 4rem; font-size: 1.1rem; }
-    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 800px; width: 100%; }
-    .card { background: #1a1a1a; border: 1px solid #333; border-radius: 12px; padding: 2rem; text-decoration: none; color: inherit; transition: all 0.2s; }
-    .card:hover { border-color: #666; transform: translateY(-4px); }
-    .card h2 { font-size: 1.5rem; margin-bottom: 0.5rem; font-weight: 500; }
-    .card p { color: #aaa; line-height: 1.6; }
-    .concept { background: linear-gradient(135deg, #1a1a1a 0%, #222 100%); border: 1px solid #c9a84c33; border-radius: 12px; padding: 2.5rem; max-width: 600px; width: 100%; margin-top: 2rem; text-align: center; }
-    .concept .badge { display: inline-block; background: #c9a84c22; color: #c9a84c; padding: 0.3rem 0.8rem; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; margin-bottom: 1rem; }
-    .concept h2 { font-size: 1.8rem; margin-bottom: 0.5rem; font-weight: 400; }
-    .concept p { color: #aaa; line-height: 1.6; margin-bottom: 1.5rem; }
-    .concept form { display: flex; gap: 0.5rem; max-width: 400px; margin: 0 auto; }
-    .concept input { flex: 1; padding: 0.7rem 1rem; background: #0a0a0a; border: 1px solid #333; color: #fff; border-radius: 6px; font-size: 0.9rem; }
-    .concept input:focus { outline: none; border-color: #c9a84c; }
-    .concept button { background: #c9a84c; color: #0a0a0a; border: none; padding: 0.7rem 1.5rem; border-radius: 6px; font-weight: 600; cursor: pointer; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FatCat Cruz — Gadget Designer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #0a0a0a;
+            color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+        }
+        .subtitle {
+            color: #888;
+            font-size: 1.25rem;
+            margin-bottom: 3rem;
+        }
+        .card {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+        }
+        .card:hover {
+            border-color: #666;
+        }
+        .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        .card p {
+            color: #888;
+        }
+        .concept {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            border: 2px solid #c9a84c;
+            padding: 2rem;
+            margin: 3rem 0;
+            border-radius: 4px;
+        }
+        .badge {
+            display: inline-block;
+            background: #c9a84c;
+            color: #0a0a0a;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.25rem 0.75rem;
+            border-radius: 3px;
+            margin-bottom: 1rem;
+        }
+        .concept h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        .concept p {
+            color: #888;
+            margin-bottom: 1.5rem;
+        }
+        form {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        input[type="email"] {
+            flex: 1;
+            min-width: 200px;
+            background: #0a0a0a;
+            border: 1px solid #333;
+            color: #fff;
+            padding: 0.75rem 1rem;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        input[type="email"]:focus {
+            outline: none;
+            border-color: #c9a84c;
+        }
+        button {
+            background: #c9a84c;
+            color: #0a0a0a;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+        footer {
+            text-align: center;
+            color: #888;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .card, .concept {
+                padding: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>FatCat Cruz</h1>
-  <p class="subtitle">Gadget Designer</p>
-  <div class="cards">
-    <div class="card">
-      <h2>Mission</h2>
-      <p>AI-designed physical products. Built to last, priced to move.</p>
+    <div class="container">
+        <h1>FatCat Cruz</h1>
+        <p class="subtitle">Gadget Designer</p>
+
+        <div class="card">
+            <h2>Mission</h2>
+            <p>AI-designed physical products. Built to last, priced to move.</p>
+        </div>
+
+        <div class="card">
+            <h2>Method</h2>
+            <p>Ship prototypes fast, validate with real users, then tool for production.</p>
+        </div>
+
+        <div class="concept">
+            <span class="badge">Concept · Q4 2026</span>
+            <h2>Pocket NOD</h2>
+            <p>52 physical negotiation prompt cards. Wallet-sized. The tactical-empathy framework in your back pocket. Designed in Chicago, manufactured small-batch.</p>
+            <form onsubmit="event.preventDefault(); alert('Waitlist coming soon via ConvertKit');">
+                <input type="email" placeholder="your@email.com" required>
+                <button type="submit">Join Waitlist</button>
+            </form>
+        </div>
+
+        <footer>
+            © 2026 FatCat Asset Management
+        </footer>
     </div>
-    <div class="card">
-      <h2>Method</h2>
-      <p>Ship prototypes fast, validate with real users, then tool for production.</p>
-    </div>
-  </div>
-  <div class="concept">
-    <div class="badge">Concept · Q4 2026</div>
-    <h2>Pocket NOD</h2>
-    <p>52 physical negotiation prompt cards. Wallet-sized. The tactical-empathy framework in your back pocket. Designed in Chicago, manufactured small-batch.</p>
-    <form onsubmit="event.preventDefault(); alert('Waitlist coming soon via ConvertKit');">
-      <input type="email" placeholder="you@email.com" required>
-      <button type="submit">Join Waitlist</button>
-    </form>
-  </div>
-  <footer style="text-align:center;color:#555;padding:2rem 1rem 3rem;font-size:0.85rem">&copy; 2026 FatCat Asset Management</footer>
 </body>
 </html>
