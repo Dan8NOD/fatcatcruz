@@ -1,161 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FatCat Cruz — Gadget Designer</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            background: #0a0a0a;
-            color: #fff;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            line-height: 1.6;
-            padding: 2rem 1rem;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        h1 {
-            font-size: 3rem;
-            font-weight: 300;
-            margin-bottom: 0.5rem;
-        }
-        .subtitle {
-            color: #888;
-            font-size: 1.25rem;
-            margin-bottom: 3rem;
-        }
-        .card {
-            background: #1a1a1a;
-            border: 1px solid #333;
-            padding: 2rem;
-            margin-bottom: 1.5rem;
-            border-radius: 4px;
-            transition: border-color 0.3s;
-        }
-        .card:hover {
-            border-color: #666;
-        }
-        .card h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            font-weight: 500;
-        }
-        .card p {
-            color: #888;
-        }
-        .concept {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-            border: 2px solid #c9a84c;
-            padding: 2rem;
-            margin: 3rem 0;
-            border-radius: 4px;
-        }
-        .badge {
-            display: inline-block;
-            background: #c9a84c;
-            color: #0a0a0a;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            padding: 0.25rem 0.75rem;
-            border-radius: 3px;
-            margin-bottom: 1rem;
-        }
-        .concept h2 {
-            font-size: 1.75rem;
-            margin-bottom: 1rem;
-            font-weight: 500;
-        }
-        .concept p {
-            color: #888;
-            margin-bottom: 1.5rem;
-        }
-        form {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-        }
-        input[type="email"] {
-            flex: 1;
-            min-width: 200px;
-            background: #0a0a0a;
-            border: 1px solid #333;
-            color: #fff;
-            padding: 0.75rem 1rem;
-            border-radius: 4px;
-            font-size: 1rem;
-        }
-        input[type="email"]:focus {
-            outline: none;
-            border-color: #c9a84c;
-        }
-        button {
-            background: #c9a84c;
-            color: #0a0a0a;
-            border: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: 4px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: opacity 0.3s;
-        }
-        button:hover {
-            opacity: 0.9;
-        }
-        footer {
-            text-align: center;
-            color: #888;
-            margin-top: 4rem;
-            padding-top: 2rem;
-            border-top: 1px solid #333;
-        }
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2rem;
-            }
-            .card, .concept {
-                padding: 1.5rem;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="FatCat Cruz — Dan Cruz's personal channel. Vlogs, negotiation content, Chicago real estate, and the daily practice of persuasion.">
+<title>FatCat Cruz — Dan Cruz</title>
+<style>
+:root{--gold:#d4a853;--gold-dim:#a98742;--ink:#0a0a0c;--panel:#14141a;--line:#26262e;--text:#f4f1ea;--muted:#8e8a7d}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--ink);color:var(--text);font-family:'Inter',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--ink);z-index:10}
+nav .logo{font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+nav .logo span{color:var(--gold)}
+nav .links{display:flex;gap:24px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+nav .links a:hover{color:var(--gold)}
+@media(max-width:640px){nav .links{display:none}}
+
+.hero{padding:96px 24px 72px;border-bottom:1px solid var(--line);text-align:center}
+.hero .eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+.hero h1{font-family:Georgia,serif;font-size:clamp(36px,7vw,72px);font-weight:300;line-height:1.05;letter-spacing:-.01em;max-width:16ch;margin:0 auto 24px}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero p{color:var(--muted);font-size:17px;max-width:52ch;margin:0 auto 36px}
+.btn{display:inline-block;padding:14px 32px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;border:1px solid transparent;transition:.2s}
+.btn.gold{background:var(--gold);color:var(--ink)}
+.btn.gold:hover{background:var(--gold-dim)}
+.btn.ghost{border-color:var(--line);color:var(--text)}
+.btn.ghost:hover{border-color:var(--gold);color:var(--gold)}
+
+section{padding:80px 0;border-bottom:1px solid var(--line)}
+section .eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+section h2{font-family:Georgia,serif;font-size:clamp(28px,5vw,44px);font-weight:300;margin-bottom:16px;max-width:20ch}
+section .lede{color:var(--muted);max-width:56ch;margin-bottom:40px}
+
+.channels{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.ch{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:28px;transition:.2s;display:flex;flex-direction:column;gap:8px}
+.ch:hover{border-color:var(--gold-dim);transform:translateY(-2px)}
+.ch .platform{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.ch h3{font-size:18px;font-weight:600}
+.ch p{color:var(--muted);font-size:14px}
+.ch .go{margin-top:auto;color:var(--gold);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+
+.bio{max-width:640px;margin:0 auto;text-align:center}
+.bio p{color:var(--muted);font-size:16px;line-height:1.7;margin-bottom:20px}
+.bio strong{color:var(--text)}
+
+.contact-box{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:48px;text-align:center}
+.contact-box h2{margin-bottom:8px}
+.contact-box p{color:var(--muted);margin-bottom:28px}
+.contact-box .email{font-family:Georgia,serif;font-size:22px;color:var(--gold)}
+
+footer{padding:40px 24px;color:var(--muted);font-size:12px;letter-spacing:.1em;text-transform:uppercase;text-align:center;border-top:1px solid var(--line)}
+footer a{color:var(--muted);border-bottom:1px solid var(--line)}
+footer a:hover{color:var(--gold)}
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>FatCat Cruz</h1>
-        <p class="subtitle">Gadget Designer</p>
 
-        <div class="card">
-            <h2>Mission</h2>
-            <p>AI-designed physical products. Built to last, priced to move.</p>
-        </div>
+<nav>
+  <div class="logo">FatCat <span>Cruz</span></div>
+  <div class="links">
+    <a href="#channels">Channels</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
-        <div class="card">
-            <h2>Method</h2>
-            <p>Ship prototypes fast, validate with real users, then tool for production.</p>
-        </div>
+<header class="hero">
+  <div class="eyebrow">Dan Cruz · Chicago</div>
+  <h1>Negotiation, <em>real estate,</em> and the daily practice of persuasion.</h1>
+  <p>Marine veteran. Chicago broker. FBI-trained methodology. This is where I document what works — on camera, in deals, and in the classroom.</p>
+  <a href="#channels" class="btn gold">Watch</a>
+  <a href="#about" class="btn ghost" style="margin-left:12px">About</a>
+</header>
 
-        <div class="concept">
-            <span class="badge">Concept · Q4 2026</span>
-            <h2>Pocket NOD</h2>
-            <p>52 physical negotiation prompt cards. Wallet-sized. The tactical-empathy framework in your back pocket. Designed in Chicago, manufactured small-batch.</p>
-            <form onsubmit="event.preventDefault(); alert('Waitlist coming soon via ConvertKit');">
-                <input type="email" placeholder="your@email.com" required>
-                <button type="submit">Join Waitlist</button>
-            </form>
-        </div>
-
-        <footer>
-            © 2026 FatCat Asset Management
-        </footer>
+<section id="channels">
+  <div class="wrap">
+    <div class="eyebrow">Where to find me</div>
+    <h2>Channels</h2>
+    <p class="lede">Daily content across platforms. Pick your feed.</p>
+    <div class="channels">
+      <a class="ch" href="https://www.youtube.com/@FatCatCruz" target="_blank" rel="noopener">
+        <span class="platform">YouTube</span>
+        <h3>FatCat Cruz</h3>
+        <p>Vlogs, deal breakdowns, and the business of being Dan. Long-form, unscripted, weekly.</p>
+        <span class="go">Subscribe →</span>
+      </a>
+      <a class="ch" href="https://www.tiktok.com/@negotiatorsondemand" target="_blank" rel="noopener">
+        <span class="platform">TikTok</span>
+        <h3>Negotiators On Demand</h3>
+        <p>Live deal coaching, Mon–Sat. Real negotiations, real-time scripts, real objections.</p>
+        <span class="go">Follow →</span>
+      </a>
+      <a class="ch" href="https://www.linkedin.com/in/dancruz" target="_blank" rel="noopener">
+        <span class="platform">LinkedIn</span>
+        <h3>Dan Cruz</h3>
+        <p>Professional updates, market commentary, and the occasional victory lap.</p>
+        <span class="go">Connect →</span>
+      </a>
+      <a class="ch" href="https://www.facebook.com/dancruz" target="_blank" rel="noopener">
+        <span class="platform">Facebook</span>
+        <h3>Dan Cruz</h3>
+        <p>Community, events, and the Chicago network. Where the locals find me.</p>
+        <span class="go">Follow →</span>
+      </a>
     </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="eyebrow">About</div>
+    <h2>The short version.</h2>
+    <div class="bio">
+      <p><strong>Dan Cruz</strong> is a Chicago real estate broker, negotiation trainer, and content creator. He served 5+ years active duty in the USMC, then built a real estate practice on the same discipline: preparation, calibration, and closing under pressure.</p>
+      <p>He founded NOD Academy to teach FBI-style negotiation to teams that persuade for a living. He runs FatCat Asset Management to keep the lights on. He films everything because the camera doesn't lie and neither does the P&L.</p>
+      <p>Currently: daily TikTok Live, weekly YouTube vlogs, and the occasional corporate training day. The goal is simple — make you harder to say no to.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-box">
+      <div class="eyebrow">Contact</div>
+      <h2>Get in touch.</h2>
+      <p>Speaking, training, media, or just want to talk shop.</p>
+      <p class="email">negotiatorsondemand@gmail.com</p>
+      <a href="mailto:negotiatorsondemand@gmail.com?subject=FatCat%20Cruz%20—%20Inquiry" class="btn gold" style="margin-top:20px">Email Dan</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 FatCat Cruz · Chicago · A FatCat Asset Management Property</p>
+  <p style="margin-top:8px"><a href="https://fatcatam.com">fatcatam.com</a> · <a href="https://negotiatorsondemand.com">negotiatorsondemand.com</a> · <a href="https://pilsenphoto.com">pilsenphoto.com</a></p>
+</footer>
+
 </body>
 </html>
